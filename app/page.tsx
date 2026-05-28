@@ -170,7 +170,15 @@ const scaleIn = {
 
 /* ─────────────── SECTION WRAPPER ─────────────── */
 
-function Section({ children, className = "" }: { children: React.ReactNode; className?: string }) {
+function Section({
+  children,
+  className = "",
+  id,
+}: {
+  children: React.ReactNode;
+  className?: string;
+  id?: string;
+ {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
   return (
