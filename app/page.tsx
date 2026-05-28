@@ -178,11 +178,13 @@ function Section({
   children: React.ReactNode;
   className?: string;
   id?: string;
- {
+}) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
+
   return (
     <motion.section
+      id={id}
       ref={ref}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
